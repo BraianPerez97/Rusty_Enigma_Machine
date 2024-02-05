@@ -34,4 +34,11 @@ fn main() {
 
     println!("Plugboard Left: {}", p.left);
     println!("Plugboard Right: {}", p.right);
+
+    // Testing forward and backward methods
+    let forward_signal = p.forward(0).unwrap();
+    let backward_signal = p.backward(forward_signal).unwrap();
+
+    println!("Forward Signal: {}", forward_signal);
+    println!("Backward Signal: {}", backward_signal);
 }

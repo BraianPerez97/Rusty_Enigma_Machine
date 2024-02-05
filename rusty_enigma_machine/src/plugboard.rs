@@ -20,4 +20,14 @@ impl Plugboard {
         }
         Plugboard { left, right }
     }
+    pub fn forward(&self, signal: usize) ->Option<usize> {
+        let letter = self.right.chars().nth(signal)?;
+        let new_signal = self.left.find(letter)?;
+        Some(new_signal)
+    }
+    pub fn backward(&self, signal: usize) ->Option<usize> {
+        let letter = self.left.chars().nth(signal)?;
+        let new_signal = self.right.find(letter)?;
+        Some(new_signal)
+    }
 }
