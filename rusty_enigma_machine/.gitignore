@@ -1,0 +1,5 @@
+# Ignore compiled artifacts
+target/
+
+# Ignore Cargo.lock file
+Cargo.lock
