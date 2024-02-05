@@ -1,0 +1,1 @@
+In this project I will be doing a code challenge for my self. In this challenge I will be trying to recreate the Enigma Machine in rust. 
