@@ -7,7 +7,10 @@ Ring-Setting: TBA
 Message: A=> X
 */
 mod keyboard;
-use keyboard::Keyboard;
+mod plugboard;
+
+use crate::keyboard::Keyboard;
+use crate::plugboard::Plugboard;
 fn main() {
     // Testing Keyboard class 
     let signal = Keyboard::forward('A');
@@ -16,13 +19,19 @@ fn main() {
         Some(signal) => {
             println!("Forward: {}", signal);
 
-            let letter = Keyboard::backwards(signal);
+            let letter = Keyboard::backward(signal);
 
             match letter {
-                Some(letter) => println!("Backwards: {}", letter),
+                Some(letter) => println!("Backward: {}", letter),
                 None => println!("Invalid signal"),
             }
         }
         None => println!("Invalid letter"),
     }
+
+    // Testing Plugboard class
+    let p = Plugboard::new(&["AR", "GK", "OX"]);
+
+    println!("Plugboard Left: {}", p.left);
+    println!("Plugboard Right: {}", p.right);
 }

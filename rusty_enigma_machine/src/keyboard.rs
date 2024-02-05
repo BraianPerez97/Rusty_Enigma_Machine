@@ -5,7 +5,7 @@ impl Keyboard {
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ".find(letter)
     }
 
-    pub fn backwards(signal: usize) -> Option<char> {
+    pub fn backward(signal: usize) -> Option<char> {
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ".chars().nth(signal)
     }
 }
