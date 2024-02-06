@@ -9,7 +9,9 @@ Message: A=> X
 mod keyboard;
 mod plugboard;
 mod rotor;
+mod reflector;
 
+use crate::reflector::Reflector;
 use crate::rotor::Rotor;
 use crate::keyboard::Keyboard;
 use crate::plugboard::Plugboard;
@@ -20,6 +22,11 @@ fn main() {
     let iii = Rotor::new("BDFHJLCPRTXVZNYEIWGAKMUSQO", 'V');
     let iv = Rotor::new("ESOVPZJAYQUIRHXLNFTGKDCMWB", 'J');
     let v = Rotor::new("VZBRGITYUPSDNHLXAWMJQOFECK", 'Z');
+
+    let a = Reflector::new("EJMZALYXVBWFCRQUONTSPIKHGD");
+    let b = Reflector::new("YRUHQSLDPXNGOKMIEBFZCWVJAT");
+    let c = Reflector::new("FVPJIAOYEDRZXWGCTKUQSBNMHL");
+    /* 
     // Testing Keyboard class 
     let signal = Keyboard::forward('A');
     
@@ -49,4 +56,4 @@ fn main() {
 
     println!("Forward Signal: {}", forward_signal);
     println!("Backward Signal: {}", backward_signal);
-}
+}*/
