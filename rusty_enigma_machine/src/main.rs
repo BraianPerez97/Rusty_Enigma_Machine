@@ -8,13 +8,21 @@ Message: A=> X
 */
 mod keyboard;
 mod plugboard;
+mod rotor;
 
+use crate::rotor::Rotor;
 use crate::keyboard::Keyboard;
 use crate::plugboard::Plugboard;
 fn main() {
+
+    let i = Rotor::new("EKMFLGDQVZNTOWYHXUSPAIBRCJ", 'Q');
+    let ii = Rotor::new("AJDKSIRUXBLHWTMCQGZNPYFVOE", 'E');
+    let iii = Rotor::new("BDFHJLCPRTXVZNYEIWGAKMUSQO", 'V');
+    let iv = Rotor::new("ESOVPZJAYQUIRHXLNFTGKDCMWB", 'J');
+    let v = Rotor::new("VZBRGITYUPSDNHLXAWMJQOFECK", 'Z');
     // Testing Keyboard class 
     let signal = Keyboard::forward('A');
-
+    
     match signal {
         Some(signal) => {
             println!("Forward: {}", signal);
