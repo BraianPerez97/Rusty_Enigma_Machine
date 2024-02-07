@@ -69,7 +69,7 @@ fn main() {
     signal = ii.backward(signal).expect("Reason");
     signal = iii.backward(signal).expect("Reason");
     signal = pb.forward(signal).expect("Reason");
-    letter = Some(kb.backward(signal.expect("Reason")).expect("Reason"));
+    letter = kb.backward(signal);
 
     println!("Resulting letter: {}", letter.expect("Reason"));
     }
