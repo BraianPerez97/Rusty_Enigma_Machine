@@ -1,6 +1,9 @@
 pub struct Keyboard;
 
 impl Keyboard {
+    pub fn new() -> Self {
+        Keyboard
+    }
     pub fn forward(&self, letter: char) -> Option<usize> {
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ".find(letter)
     }

@@ -4,7 +4,7 @@ pub struct Reflector {
 }
 
 impl Reflector {
-    pub fn new(&self, wiring: &str) -> Reflector {
+    pub fn new(wiring: &str) -> Reflector {
         Reflector {
             left: "ABCDEFGHIJKLMNOPQRSTUVWXYZ".to_string(),
             right: wiring.to_string(),
