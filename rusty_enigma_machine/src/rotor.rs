@@ -1,22 +1,22 @@
 pub struct Rotor {
     pub left: String,
     pub right: String,
-    pub notch: usize,
+    pub notch: char,
 }
 
 impl Rotor {
-    pub fn new(wiring: &str, notch:char) -> Rotor {
+    pub fn new(wiring: &str, notch: char) -> Rotor {
         Rotor {
             left: "ABCDEFGHIJKLMNOPQRSTUVWXYZ".to_string(),
-            right:wiring.to_string(),
+            right: wiring.to_string(),
             notch,
         }
     }
 
-    pub fn foward(&self, signal: usize) -> Option<usize> {
+    pub fn forward(&self, signal: usize) -> Option<usize> {
         let letter = self.right.chars().nth(signal)?;
         let new_signal = self.left.find(letter)?;
-        Some(new_singal)
+        Some(new_signal)
     }
 
     pub fn backward(&self, signal: usize) -> Option<usize> {

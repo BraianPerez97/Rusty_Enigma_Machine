@@ -15,45 +15,38 @@ use crate::reflector::Reflector;
 use crate::rotor::Rotor;
 use crate::keyboard::Keyboard;
 use crate::plugboard::Plugboard;
-fn main() {
 
+fn main() {
+    // Creating instances of the Reflector class
     let i = Rotor::new("EKMFLGDQVZNTOWYHXUSPAIBRCJ", 'Q');
     let ii = Rotor::new("AJDKSIRUXBLHWTMCQGZNPYFVOE", 'E');
     let iii = Rotor::new("BDFHJLCPRTXVZNYEIWGAKMUSQO", 'V');
     let iv = Rotor::new("ESOVPZJAYQUIRHXLNFTGKDCMWB", 'J');
     let v = Rotor::new("VZBRGITYUPSDNHLXAWMJQOFECK", 'Z');
 
-    let a = Reflector::new("EJMZALYXVBWFCRQUONTSPIKHGD");
-    let b = Reflector::new("YRUHQSLDPXNGOKMIEBFZCWVJAT");
-    let c = Reflector::new("FVPJIAOYEDRZXWGCTKUQSBNMHL");
-    /* 
-    // Testing Keyboard class 
-    let signal = Keyboard::forward('A');
-    
-    match signal {
-        Some(signal) => {
-            println!("Forward: {}", signal);
+    // Creating instances of the Reflector class
+    let a = Reflector::new("EJMZALYXVBWFCRQUONTSPIKHGD", 'A');
+    let b = Reflector::new("YRUHQSLDPXNGOKMIEBFZCWVJAT", 'B');
+    let c = Reflector::new("FVPJIAOYEDRZXWGCTKUQSBNMHL", 'C');
 
-            let letter = Keyboard::backward(signal);
+    // Creating instances of the Plugboard and Keyboard class
 
-            match letter {
-                Some(letter) => println!("Backward: {}", letter),
-                None => println!("Invalid signal"),
-            }
-        }
-        None => println!("Invalid letter"),
-    }
+    let kb = Keyboard;
+    let pb = Plugboard::new(&["AR", "GK", "OX"]);
 
-    // Testing Plugboard class
-    let p = Plugboard::new(&["AR", "GK", "OX"]);
+    let mut letter: Option<char> = Some('0');
 
-    println!("Plugboard Left: {}", p.left);
-    println!("Plugboard Right: {}", p.right);
+    let mut signal = kb.forward(letter).expect("Expected a char, but got None");
+    signal = pb.backward(signal).expect("Expected a char, but got None");
+    signal = iii.forward(signal).expect("Expected a char, but got None");
+    signal = ii.forward(signal).expect("Expected a char, but got None");
+    signal = i.forward(signal).expect("Expected a char, but got None");
+    signal = a.reflect(signal).expect("Expected a char, but got None");
+    signal = i.backward(signal).expect("Expected a char, but got None");
+    signal = ii.backward(signal).expect("Expected a char, but got None");
+    signal = iii.backward(signal).expect("Expected a char, but got None");
+    signal = pb.forward(signal).expect("Expected a char, but got None");
+    letter = kb.backward(signal).expect("Expected a char, but got None");
 
-    // Testing forward and backward methods
-    let forward_signal = p.forward(0).unwrap();
-    let backward_signal = p.backward(forward_signal).unwrap();
-
-    println!("Forward Signal: {}", forward_signal);
-    println!("Backward Signal: {}", backward_signal);
-}*/
+    println!("Resulting letter: {}", letter);
+}
