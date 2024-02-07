@@ -21,36 +21,36 @@ use crate::rotor::Rotor;
 fn main() {
     
     // Creating instances of the Reflector class
-    let a = Reflector::new("EJMZALYXVBWFCRQUONTSPIKHGD");
-    let b = Reflector::new("YRUHQSLDPXNGOKMIEBFZCWVJAT");
-    let c = Reflector::new("FVPJIAOYEDRZXWGCTKUQSBNMHL");
+    let _a = Reflector::new("EJMZALYXVBWFCRQUONTSPIKHGD");
+    let _b = Reflector::new("YRUHQSLDPXNGOKMIEBFZCWVJAT");
+    let _c = Reflector::new("FVPJIAOYEDRZXWGCTKUQSBNMHL");
 
 
     
     // Creating instances of the Rotor class
-    let i = Rotor::new("EKMFLGDQVZNTOWYHXUSPAIBRCJ", 'Q');
-    let ii = Rotor::new("AJDKSIRUXBLHWTMCQGZNPYFVOE", 'E');
-    let iii = Rotor::new("BDFHJLCPRTXVZNYEIWGAKMUSQO", 'V');
-    let iv = Rotor::new("ESOVPZJAYQUIRHXLNFTGKDCMWB", 'J');
-    let v = Rotor::new("VZBRGITYUPSDNHLXAWMJQOFECK", 'Z');
+    let _i = Rotor::new("EKMFLGDQVZNTOWYHXUSPAIBRCJ", 'Q');
+    let _ii = Rotor::new("AJDKSIRUXBLHWTMCQGZNPYFVOE", 'E');
+    let _iii = Rotor::new("BDFHJLCPRTXVZNYEIWGAKMUSQO", 'V');
+    let _iv = Rotor::new("ESOVPZJAYQUIRHXLNFTGKDCMWB", 'J');
+    let _v = Rotor::new("VZBRGITYUPSDNHLXAWMJQOFECK", 'Z');
 
     // Creating instances of the Plugboard and Keyboard class
-    let kb = Keyboard::new();
-    let pb = Plugboard::new(&["AR", "GK", "OX"]);
+    let _kb = Keyboard::new();
+    let _pb = Plugboard::new(&["AR", "GK", "OX"]);
 
-    let mut letter: Option<char> = Some('A');
+    let _letter: Option<char> = Some('A');
 
     // Creating instances of the Reflector class
     let a = Reflector { left: "EJMZALYXVBWFCRQUONTSPIKHGD".to_string(), right: "EJMZALYXVBWFCRQUONTSPIKHGD".to_string() };
-    let b = Reflector { left: "YRUHQSLDPXNGOKMIEBFZCWVJAT".to_string(), right: "YRUHQSLDPXNGOKMIEBFZCWVJAT".to_string() };
-    let c = Reflector { left: "FVPJIAOYEDRZXWGCTKUQSBNMHL".to_string(), right: "FVPJIAOYEDRZXWGCTKUQSBNMHL".to_string() };
+    let _b = Reflector { left: "YRUHQSLDPXNGOKMIEBFZCWVJAT".to_string(), right: "YRUHQSLDPXNGOKMIEBFZCWVJAT".to_string() };
+    let _c = Reflector { left: "FVPJIAOYEDRZXWGCTKUQSBNMHL".to_string(), right: "FVPJIAOYEDRZXWGCTKUQSBNMHL".to_string() };
 
     // Creating instances of the Rotor class
     let i = Rotor::new("EKMFLGDQVZNTOWYHXUSPAIBRCJ", 'Q');
     let ii = Rotor::new("AJDKSIRUXBLHWTMCQGZNPYFVOE", 'E');
     let iii = Rotor::new("BDFHJLCPRTXVZNYEIWGAKMUSQO", 'V');
-    let iv = Rotor::new("ESOVPZJAYQUIRHXLNFTGKDCMWB", 'J');
-    let v = Rotor::new("VZBRGITYUPSDNHLXAWMJQOFECK", 'Z');
+    let _iv = Rotor::new("ESOVPZJAYQUIRHXLNFTGKDCMWB", 'J');
+    let _v = Rotor::new("VZBRGITYUPSDNHLXAWMJQOFECK", 'Z');
 
     // Creating instances of the Plugboard and Keyboard class
     let kb = Keyboard::new();
