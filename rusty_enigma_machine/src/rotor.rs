@@ -5,6 +5,20 @@ pub struct Rotor {
 }
 
 impl Rotor {
+    pub fn show(&self) {
+        println!("Left: {}", self.left);
+        println!("Right: {}", self.right);
+        println!("Notch: {}", self.notch);
+    }
+    
+
+    pub fn rotate(&mut self) {
+        let left = self.left.remove(0);
+        let right = self.right.remove(0);
+
+        self.left.push(left_char);
+        self.right.push(right_char);
+    }
     pub fn new(wiring: &str, notch: char) -> Rotor {
         Rotor {
             left: "ABCDEFGHIJKLMNOPQRSTUVWXYZ".to_string(),

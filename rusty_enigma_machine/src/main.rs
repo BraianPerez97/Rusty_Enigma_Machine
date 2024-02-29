@@ -38,6 +38,10 @@ fn main() {
     let _kb = Keyboard::new();
     let _pb = Plugboard::new(&["AR", "GK", "OX"]);
 
+    // Get User Input
+    /* println!("Enter Message: ");
+    let user_input = read_line(); */
+
     let _letter: Option<char> = Some('A');
 
     // Creating instances of the Reflector class
